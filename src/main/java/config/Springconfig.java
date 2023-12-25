@@ -21,7 +21,7 @@ public class Springconfig {
     DataSource dataSource(){
         DriverManagerDataSource dataSource= new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/book");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/demoorders");
         dataSource.setUsername("root");
         dataSource.setPassword("minhthuan0107");
         return  dataSource;
@@ -38,7 +38,7 @@ public class Springconfig {
     }
     final Properties additionalProperties() {
         final Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create");//update
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");//update
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
         hibernateProperties.setProperty("hibernate.show_sql", "true");
         hibernateProperties.setProperty("hibernate.format_sql", "true");
